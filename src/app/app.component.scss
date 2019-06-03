@@ -1,0 +1,92 @@
+@import './styles/styles.scss';
+
+.container {
+  min-width: 1040px;
+}
+
+.section {
+  @include background-color(gray, 'x-light');
+  @include padding('m');
+  border: 2px solid getColor(gray, 'light');
+  border-radius: 4px;
+}
+
+h2 {
+  @include font('l', 'heading');
+}
+
+.spaceBox {
+  display:inline-block;
+  @include margin('xxs');
+  @include background-color(blue, 'x-light');
+  &.xxxs { @include padding('xxxs'); }
+  &.xxs { @include padding('xxs'); }
+  &.xs { @include padding('xs'); }
+  &.s { @include padding('s'); }
+  &.m { @include padding('m'); }
+  &.l { @include padding('l'); }
+  &.xl { @include padding('xl'); }
+  &.xxl { @include padding('xxl'); }
+  &.xxxl { @include padding('xxxl'); }
+  &.xxxxl { @include padding('xxxxl'); }
+  &::after { content: "\A"; }
+  border-radius: 2px
+}
+
+.text {
+  @include color(blue, 'xx-dark');
+  display:block;
+  &.xxs { @include font('xxs'); }
+  &.xs { @include font('xs'); }
+  &.s { @include font('s'); }
+  &.m { @include font('m'); }
+  &.l { @include font('l'); }
+  &.xl { @include font('xl'); }
+  &.xxl { @include font('xxl'); }
+  &.xxxl { @include font('xxxl'); }
+}
+
+.colorBox {
+  @include padding('s');
+  @include margin-right('s');
+  @include margin-top('s');
+  display:inline-block;
+  border-radius: 4px;
+  &.red {
+   @include background-color(red);
+   &.xx-light { @include background-color(red, 'xx-light') }
+   &.x-light { @include background-color(red, 'x-light') }
+   &.light { @include background-color(red, 'light') }
+   &.dark { @include background-color(red, 'dark') }
+   &.x-dark { @include background-color(red, 'x-dark') }
+   &.xx-light { @include background-color(red, 'xx-dark') }
+  }
+  &.green {
+   @include background-color(green);
+   &.xx-light { @include background-color(green, 'xx-light') }
+   &.x-light { @include background-color(green, 'x-light') }
+   &.light { @include background-color(green, 'light') }
+   &.dark { @include background-color(green, 'dark') }
+   &.x-dark { @include background-color(green, 'x-dark') }
+   &.xx-light { @include background-color(green, 'xx-dark') }
+  }
+  &.blue {
+   @include background-color(blue);
+   &.xx-light { @include background-color(blue, 'xx-light') }
+   &.x-light { @include background-color(blue, 'x-light') }
+   &.light { @include background-color(blue, 'light') }
+   &.dark { @include background-color(blue, 'dark') }
+   &.x-dark { @include background-color(blue, 'x-dark') }
+   &.xx-light { @include background-color(blue, 'xx-dark') }
+  }
+  &.gray {
+   @include background-color(gray);
+   &.xx-light { @include background-color(gray, 'xx-light') }
+   &.x-light { @include background-color(gray, 'x-light') }
+   &.light { @include background-color(gray, 'light') }
+   &.dark { @include background-color(gray, 'dark') }
+   &.x-dark { @include background-color(gray, 'x-dark') }
+   &.xx-light { @include background-color(gray, 'xx-dark') }
+  }
+
+}
